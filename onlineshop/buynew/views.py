@@ -4,7 +4,6 @@ from django.shortcuts import render
 
 def home(request):
     if request.method == "POST":
-        print('gotPOST')
         form = request.POST
         a = int(form.get("integer_A",None))
         b = int(form.get("integer_B",None))
