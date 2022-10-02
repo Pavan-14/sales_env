@@ -4,6 +4,7 @@ from django.shortcuts import render
 
 def home(request):
     if request.method == "POST":
+        # print('gotPOST')
         form = request.POST
         a = int(form.get("integer_A",None))
         b = int(form.get("integer_B",None))
@@ -17,7 +18,9 @@ def home(request):
         else:
             print('select any one of the operator')
         context = {"res":result}
-    else:
+        # print(context)
+    '''else:
+        # print('gotPOST')
         context = {}
-
+    '''
     return render(request,"home.html",context)
