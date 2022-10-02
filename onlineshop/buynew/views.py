@@ -19,8 +19,7 @@ def home(request):
             print('select any one of the operator')
         context = {"res":result}
         # print(context)
-    '''else:
+    else:
         # print('gotPOST')
         context = {}
-    '''
     return render(request,"home.html",context)
