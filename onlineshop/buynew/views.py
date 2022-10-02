@@ -19,7 +19,6 @@ def home(request):
         context = {"res":result}
         print(context)
     else:
-        print('gotGET')
         context = {}
 
     return render(request,"home.html",context)
