@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>salesforce</title>
+</head>
+<body>
+    <div>
+        <div>
+            <form action="" method="post">
+                {% csrf_token %}
+                <input type="number" name="integer_A" id="integer_a">
+                <input type="number" name="integer_B" id="integer_b">
+                <select name="operation" id="arthimetic">
+                    <option value="add"> + </option>
+                    <option value="sub"> - </option>
+                </select>
+                <button type="submit">Submit</button>
+            </form>
+        </div>
+        <div>
+            <P>Result =  {{ res }}</P>
+        </div>
+    </div>
+</body>
+</html
