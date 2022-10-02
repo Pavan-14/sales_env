@@ -17,7 +17,6 @@ def home(request):
         else:
             print('select any one of the operator')
         context = {"res":result}
-        print(context)
     else:
         context = {}
 
