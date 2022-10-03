@@ -4,24 +4,64 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body {
+            background-color: rgb(132, 199, 207);
+        }
+        fieldset {
+        padding: 30px;
+        }
+        button{
+            background-color: #4CAF50;
+            border: none;
+            color: white;
+            padding: 10px 24px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+        }
+        h2 {
+            text-align: center;
+        }
+        p {
+            color:whitesmoke;
+        }
+    </style>
     <title>salesforce</title>
 </head>
 <body>
     <div>
+        <h2> Welcome to Salesforce Web Application </h2>
+    </div>
+    <div>
         <div>
-            <form action="" method="post">
+            <form action="" method="post" name="myform">
                 {% csrf_token %}
-                <input type="number" name="integer_A" id="integer_a">
-                <input type="number" name="integer_B" id="integer_b">
-                <select name="operation" id="arthimetic">
-                    <option value="add"> + </option>
-                    <option value="sub"> - </option>
-                </select>
-                <button type="submit"> Submit </button>
+                <fieldset>
+                    <label for="value"> A value</label>
+                    <input type="number" name="integer_A" placeholder="10" id="integer_a">
+                    <br>
+                    <br>
+                    <label for="value"> B value</label>
+                    <input type="number" name="integer_B" placeholder="-5" id="integer_b">
+                    <br>
+                    <br>
+                    <label for="sign"> Select Sign</label>
+                    <select name="operation" id="arthimetic">
+                        <option value="add"> + </option>
+                        <option value="sub"> - </option>
+                    </select>
+                </fieldset>
+                <br>
+                <br>
+                <button type='submit'> Submit </button>
             </form>
         </div>
+        <br>
+        <br>
         <div>
-            <P>Result =  {{ res }}</P>
+            <p>The Result is {{ res }}</p>
         </div>
     </div>
 </body>
