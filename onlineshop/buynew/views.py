@@ -1,3 +1,5 @@
+from urllib import response
+from django.http import HttpResponse
 from django.shortcuts import render
 
 # Create your views here.
@@ -9,15 +11,17 @@ def home(request):
         a = int(form.get("integer_A",None))
         b = int(form.get("integer_B",None))
         action = form.get("operation",None)
-        result = 0
+        result_val = 0
 
         if action == "add":
-            result = a+b
+            result_val = a+b
         elif action == 'sub':
-            result = a-b
+            result_val = a-b
+        """
         else:
             print('select any one of the operator')
-        context = {"res":result}
+        """
+        context = {"res":result_val}
         # print(context)
     else:
         # print('gotPOST')
